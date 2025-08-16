@@ -111,6 +111,11 @@ p, li {
   max-width: 120px;
   margin-bottom: 1em;
 }
+#monsters .card img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
 
 .card:hover {
   transform: translateY(-5px);
