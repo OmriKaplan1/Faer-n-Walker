@@ -1,4 +1,3 @@
-/* style.css */
 body {
   margin: 0;
   font-family: 'Cinzel', serif;
@@ -80,25 +79,44 @@ p, li {
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
-.azure-services {
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.2em;
-  margin-bottom: 2em;
+  gap: 1.5em;
+  margin-top: 1.5em;
 }
 
-.service {
+.card {
   background: #2c2424;
-  padding: 1.2em;
-  border-radius: 8px;
-  border-left: 5px solid #ffcb6b;
-  font-size: 1.05em;
+  padding: 1.5em;
+  border-radius: 10px;
+  border: 2px solid #ffcb6b;
   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  text-align: center;
   transition: transform 0.2s;
 }
 
-.service:hover {
-  transform: translateY(-4px);
+.card img {
+  max-width: 150px;
+  margin-bottom: 1em;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.progress-bar {
+  background: #3b2f2f;
+  border: 2px solid #ffcb6b;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 24px;
+  margin: 1em 0;
+}
+
+.progress {
+  background: linear-gradient(90deg, #ffd27f, #c68542);
+  height: 100%;
 }
 
 footer {
