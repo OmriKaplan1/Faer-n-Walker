@@ -79,6 +79,11 @@ p, li {
   background: linear-gradient(90deg, #c68542, #a9743a);
   transform: scale(1.05);
 }
+.site-logo {
+  max-width: 120px;   /* adjust size */
+  margin: 0.5em auto 1em;
+  display: block;
+}
 
 .screenshot, .diagram {
   display: block;
@@ -88,6 +93,32 @@ p, li {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
+.azure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+
+.azure-card {
+  background: #fdf7e3;
+  border: 2px solid #c2a676;
+  border-radius: 10px;
+  padding: 1.2em;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+
+.azure-card:hover {
+  transform: translateY(-5px);
+}
+
+.azure-card img {
+  max-width: 60px;
+  margin-bottom: 0.8em;
+}
+
 
 /* Card Layout */
 .card-grid {
