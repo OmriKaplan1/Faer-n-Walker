@@ -1,8 +1,10 @@
+/* General Layout */
 body {
   margin: 0;
   font-family: 'Cinzel', serif;
-  background: linear-gradient(to bottom, #1e1b18, #2a2421);
-  color: #f4e1c1;
+  background: url("assets/background/parchment-texture.jpg") repeat;
+  background-size: cover;
+  color: #2d1b0f;
   line-height: 1.6;
 }
 
@@ -18,6 +20,7 @@ header h1 {
   font-size: 2.7em;
   color: #ffd27f;
   letter-spacing: 2px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
 nav a {
@@ -36,13 +39,18 @@ nav a:hover {
 
 section {
   padding: 3em 2em;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
+  background: rgba(255, 249, 229, 0.92);
+  border: 3px solid #c2a676;
+  border-radius: 12px;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 h2 {
-  color: #ffcb6b;
-  border-bottom: 2px solid #ffcb6b;
+  color: #4a2b09;
+  border-bottom: 2px solid #c2a676;
   padding-bottom: 0.3em;
   margin-bottom: 1em;
   font-size: 1.8em;
@@ -50,6 +58,7 @@ h2 {
 
 p, li {
   font-size: 1.1em;
+  color: #2d1b0f;
 }
 
 .button {
@@ -79,35 +88,52 @@ p, li {
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
+/* Card Layout */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5em;
   margin-top: 1.5em;
 }
 
 .card {
-  background: #2c2424;
+  background: #fdf7e3;
   padding: 1.5em;
   border-radius: 10px;
-  border: 2px solid #ffcb6b;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  border: 2px solid #c2a676;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card img {
-  max-width: 150px;
+  max-width: 120px;
   margin-bottom: 1em;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
+/* Class-specific Glow Hover Effects */
+.card.barbarian:hover { border-color: #b22222; box-shadow: 0 0 12px #b22222; }
+.card.bard:hover { border-color: #9932cc; box-shadow: 0 0 12px #9932cc; }
+.card.cleric:hover { border-color: #ffd700; box-shadow: 0 0 12px #ffd700; }
+.card.druid:hover { border-color: #228b22; box-shadow: 0 0 12px #228b22; }
+.card.fighter:hover { border-color: #708090; box-shadow: 0 0 12px #708090; }
+.card.monk:hover { border-color: #ff8c00; box-shadow: 0 0 12px #ff8c00; }
+.card.paladin:hover { border-color: #87ceeb; box-shadow: 0 0 12px #87ceeb; }
+.card.ranger:hover { border-color: #2e8b57; box-shadow: 0 0 12px #2e8b57; }
+.card.rogue:hover { border-color: #696969; box-shadow: 0 0 12px #696969; }
+.card.sorcerer:hover { border-color: #ff1493; box-shadow: 0 0 12px #ff1493; }
+.card.warlock:hover { border-color: #800080; box-shadow: 0 0 12px #800080; }
+.card.wizard:hover { border-color: #4169e1; box-shadow: 0 0 12px #4169e1; }
+
+/* Progress Bar */
 .progress-bar {
   background: #3b2f2f;
-  border: 2px solid #ffcb6b;
+  border: 2px solid #c2a676;
   border-radius: 10px;
   overflow: hidden;
   height: 24px;
@@ -119,6 +145,7 @@ p, li {
   height: 100%;
 }
 
+/* Footer */
 footer {
   background: #3b2f2f;
   text-align: center;
