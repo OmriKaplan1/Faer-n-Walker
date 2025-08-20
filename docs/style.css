@@ -100,6 +100,18 @@ p, li {
   margin-top: 1.5em;
 }
 
+.azure-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: 1fr;
+  margin-top: 1.5em;
+}
+@media (min-width: 640px) {
+  .grid-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .azure-card {
   background: #fdf7e3;
   border: 2px solid #c2a676;
