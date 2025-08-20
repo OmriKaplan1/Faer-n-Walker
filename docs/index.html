@@ -11,12 +11,12 @@
 <body>
   <header>
     <h1>Faerûn Walker</h1>
-    <img src="assets/logo.png" alt="Faerûn Walker Logo" class="site-logo">
+    <img src="assets/logos/logo.png" alt="Faerûn Walker Logo" class="site-logo">
     <nav>
       <a href="#home">Home</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#azure">Azure Architecture</a>
-      <a href="#about-build">About This Build</a>
+      <a href="#logic">Logic</a>
       <a href="#classes">Classes</a>
       <a href="#progression">Progression</a>
       <a href="#items">Items</a>
@@ -28,7 +28,7 @@
   <section id="home" class="reveal">
     <h2>Turn Your Steps into Adventures</h2>
     <p>Faerûn Walker transforms your real-world activity into a Dungeons & Dragons-inspired journey through the world of Faerûn.</p>
-    <img src="assets/screenshot-main.png" alt="Game screenshot" class="screenshot" />
+    <img src="assets/logos/screenshot-main.png" alt="Game screenshot" class="screenshot" />
     <a class="button" href="#demo">▶ Try the Live Demo</a>
   </section>
 
@@ -69,18 +69,39 @@
   </div>
 </section>
 
-<section id="about-build">
-  <h2>
-    <img src="assets/logos/OIP.webp" alt="Base44 logo" style="height: 32px; vertical-align: middle; margin-right: 8px;">
-    About This Build
-  </h2>
+<section id="logic">
+  <h2>Logic</h2>
+
   <p>
-    This website’s frontend was built with the help of <strong>Base44</strong> and is hosted on their
-    platform. We replaced the default backend with our own Azure cloud services, using Base44’s
-    <em>Backend Functions</em> feature. This approach allows us to keep Base44’s streamlined UI and hosting
-    while running our custom business logic and data through Azure Functions.
+    Our frontend runs on <strong>Base44</strong> (rendering, routing, hosting). The client
+    interacts with Base44, and Base44 calls our <strong>Azure Functions</strong> via the
+    “Backend Functions” integration. Functions hold the business logic and secrets,
+    reading/writing data in <strong>Azure SQL Database</strong> and storing media/documents
+    in <strong>Azure Blob Storage</strong>. Map tiles, geocoding, and visualization use
+    <strong>Azure Maps</strong> directly from the frontend. This keeps the UI fast,
+    scales compute independently, and centralizes sensitive logic in the cloud.
   </p>
+
+  <ul>
+    <li><strong>Client ↔ Base44:</strong> UI, auth, routing, and caching.</li>
+    <li><strong>Base44 ↔ Azure Functions:</strong> API calls for domain logic.</li>
+    <li><strong>Azure Functions ↔ SQL / Blob:</strong> relational data + files/media.</li>
+    <li><strong>Base44 ↔ Azure Maps:</strong> tiles, geocoding, and map display.</li>
+  </ul>
+
+  <p>
+    <a class="button" href="https://github.com/OmriKaplan1/Faerun-Walker" target="_blank" rel="noopener">
+      View our source code on GitHub
+    </a>
+  </p>
+
+  <figure class="flowchart">
+    <!-- replace src with your exported flowchart path -->
+    <img src="assets/logos/flowchart.png"
+         alt="Flowchart: Client (wizard) ↔ Base44 ↔ Azure Functions ↔ SQL/Blob, with Base44 ↔ Azure Maps">
+  </figure>
 </section>
+
 
 <section id="classes" class="reveal">
   <h2>The Twelve Classes</h2>
@@ -161,12 +182,12 @@
     <h2>Items</h2>
     <div class="card-grid">
       <div class="card">
-        <img src="assets/items/sword.png" alt="Sword of Dawn">
+        <img src="assets/items/sword-removebg-preview.png" alt="Sword of Dawn">
         <h3>Sword of Dawn</h3>
         <p>+2 attack, shines with radiant energy.</p>
       </div>
       <div class="card">
-        <img src="assets/items/shield.png" alt="Shield">
+        <img src="assets/items/shield-removebg-preview.png" alt="Shield">
         <h3>Guardian Shield</h3>
         <p>Provides +3 defense and blocks magic missiles.</p>
       </div>
@@ -177,12 +198,12 @@
     <h2>Monsters</h2>
     <div class="card-grid">
       <div class="card">
-        <img src="assets/monsters/Balor.jpg" alt="Balor">
+        <img src="assets/monsters/Balor-removebg-preview.png" alt="Balor">
         <h3>Balor</h3>
         <p>A mighty demon lord wreathed in flame and shadow, wielding a vorpal sword.</p>
       </div>
       <div class="card">
-        <img src="assets/monsters/Chimera.jpg" alt="Chimera">
+        <img src="assets/monsters/Chimera-removebg-preview.png" alt="Chimera">
         <h3>Chimera</h3>
         <p>A three-headed monstrosity with the body of a lion, a goat's head sprouting from its back, and a serpentine tail.</p>
       </div>

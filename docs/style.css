@@ -93,23 +93,12 @@ p, li {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
-/* .azure-grid {
+
+.azure-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5em;
   margin-top: 1.5em;
-} */
-
-.azure-grid {
-  display: grid;
-  gap: 1.5em;
-  grid-template-columns: 1fr;
-  margin-top: 1.5em;
-}
-@media (min-width: 640px) {
-  .grid-grid {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 .azure-card {
@@ -131,6 +120,15 @@ p, li {
   margin-bottom: 0.8em;
 }
 
+#logic .flowchart img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 1.25em auto 0;
+  border: 2px solid #c2a676;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
 
 /* Card Layout */
 .card-grid {
