@@ -93,12 +93,12 @@ p, li {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
-.azure-grid {
+/* .azure-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5em;
   margin-top: 1.5em;
-}
+} */
 
 .azure-grid {
   display: grid;
