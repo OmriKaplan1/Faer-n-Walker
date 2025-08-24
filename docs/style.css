@@ -79,6 +79,14 @@ p, li {
   background: linear-gradient(90deg, #c68542, #a9743a);
   transform: scale(1.05);
 }
+
+.button-container {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  gap: 15px;              /* spacing between buttons */
+  margin-top: 20px;
+}
+
 .site-logo {
   max-width: 120px;   /* adjust size */
   margin: 0.5em auto 1em;
