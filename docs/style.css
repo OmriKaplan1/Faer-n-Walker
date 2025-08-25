@@ -62,6 +62,31 @@ p, li {
   color: #2d1b0f;
 }
 
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+.home-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.home-image {
+  flex: 1;
+  text-align: center;
+}
+
+.home-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
 .button {
   display: inline-block;
   margin-top: 1em;
@@ -86,6 +111,16 @@ p, li {
   gap: 15px;              /* spacing between buttons */
   margin-top: 20px;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #8b0000; /* matches your theme */
+}
+
+.swiper-pagination-bullet-active {
+  background: #8b0000;
+}
+
 
 .site-logo {
   max-width: 120px;   /* adjust size */
