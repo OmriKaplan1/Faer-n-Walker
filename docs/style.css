@@ -123,19 +123,20 @@ p, li {
 
 .swiper-slide img {
   width: 100%;
-  max-width: 500px;   /* set a consistent max size */
-  height: 300px;      /* fixed height */
+  max-width: 800px;   /* set a consistent max size */
+  height: 500px;      /* fixed height */
   object-fit: contain; /* keeps aspect ratio, adds padding if needed */
   display: block;
   margin: 0 auto;     /* center horizontally */
   border-radius: 12px; /* optional: rounded corners */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* optional: make it pretty */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5); /* optional: make it pretty */
 }
 
 /* Center text under each image */
 .swiper-slide p {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 12px;
+  font-size: 1.1rem
 }
 
 
