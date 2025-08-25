@@ -44,8 +44,11 @@
 </section>
 
 
+<!-- How It Works Section -->
 <section id="how-it-works" class="reveal">
   <h2>How It Works</h2>
+
+  <!-- Swiper Container -->
   <div class="swiper">
     <div class="swiper-wrapper">
       <!-- Repeat for each of your 7 app pages -->
@@ -59,24 +62,26 @@
       </div>
       <div class="swiper-slide">
         <img src="assets/pages/Character.png" alt="Character">
-        <p><strong>Step Tracking:</strong> Your real-life steps translate into in-game movement.</p>
-    </div>
+        <p><strong>Character Progression:</strong> Level up and improve your hero as you walk.</p>
+      </div>
       <div class="swiper-slide">
         <img src="assets/pages/Inventory.png" alt="Inventory">
-        <p><strong>Step Tracking:</strong> Your real-life steps translate into in-game movement.</p>
-    </div>
+        <p><strong>Inventory:</strong> Collect loot and manage your equipment.</p>
+      </div>
       <div class="swiper-slide">
         <img src="assets/pages/Shop.png" alt="Shop">
-        <p><strong>Step Tracking:</strong> Your real-life steps translate into in-game movement.</p>
-    </div>
+        <p><strong>Shop:</strong> Spend your gold on powerful items.</p>
+      </div>
       <div class="swiper-slide">
         <img src="assets/pages/Compendium.png" alt="Compendium">
-        <p><strong>Step Tracking:</strong> Your real-life steps translate into in-game movement.</p>
-    </div>
+        <p><strong>Compendium:</strong> Learn about the world and creatures you encounter.</p>
+      </div>
       <div class="swiper-slide">
         <img src="assets/pages/Achievements.png" alt="Achievements">
-        <p><strong>Step Tracking:</strong> Your real-life steps translate into in-game movement.</p>
+        <p><strong>Achievements:</strong> Unlock milestones as you explore.</p>
+      </div>
     </div>
+
     <!-- Navigation buttons -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -84,6 +89,29 @@
     <div class="swiper-pagination"></div>
   </div>
 </section>
+
+<!-- Swiper JS (place before your script.js) -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Swiper Init -->
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
 
 <section id="azure" class="reveal">
   <h2>Services</h2>
