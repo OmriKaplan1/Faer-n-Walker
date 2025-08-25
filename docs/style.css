@@ -85,6 +85,18 @@ p, li {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+.fantasy-list {
+  list-style: none;   /* remove default bullets */
+  padding: 0;
+  margin: 20px 0;
+}
+
+.fantasy-list li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 
 
 .button {
