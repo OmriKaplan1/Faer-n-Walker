@@ -121,6 +121,23 @@ p, li {
   background: #8b0000;
 }
 
+.swiper-slide img {
+  width: 100%;
+  max-width: 500px;   /* set a consistent max size */
+  height: 300px;      /* fixed height */
+  object-fit: contain; /* keeps aspect ratio, adds padding if needed */
+  display: block;
+  margin: 0 auto;     /* center horizontally */
+  border-radius: 12px; /* optional: rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* optional: make it pretty */
+}
+
+/* Center text under each image */
+.swiper-slide p {
+  text-align: center;
+  margin-top: 10px;
+}
+
 
 .site-logo {
   max-width: 120px;   /* adjust size */
