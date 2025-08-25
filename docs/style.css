@@ -123,8 +123,8 @@ p, li {
 
 .swiper-slide img {
   width: 100%;
-  max-width: 800px;   /* set a consistent max size */
-  height: 500px;      /* fixed height */
+  max-width: 1000px;   /* set a consistent max size */
+  height: 700px;      /* fixed height */
   object-fit: contain; /* keeps aspect ratio, adds padding if needed */
   display: block;
   margin: 0 auto;     /* center horizontally */
@@ -135,10 +135,13 @@ p, li {
 /* Center text under each image */
 .swiper-slide p {
   text-align: center;
-  margin-top: 12px;
+  margin-top: 40px;
   font-size: 1.1rem
 }
-
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 15px;
+}
 
 .site-logo {
   max-width: 120px;   /* adjust size */
