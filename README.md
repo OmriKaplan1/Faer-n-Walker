@@ -9,7 +9,7 @@
   - [Setup](#setup)
   - [Configuration](#configuration)
 - [Project Structure](#project-structure)
--[Azure Functions Backend Setup](#azure-functions-backend-setup)
+- [Azure Functions Backend Setup](#azure-functions-backend-setup)
 ## Introduction
 
 Faerûn Wanderer transforms your real-world activity into a Dungeons & Dragons-inspired journey through the magical world of Faerûn. This application gamifies your daily walks and fitness routine by integrating your steps into a rich fantasy role-playing experience.
