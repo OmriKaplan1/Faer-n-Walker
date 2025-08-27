@@ -1,7 +1,5 @@
 # Faerûn Wanderer
 
-![Faerûn Wanderer Architecture Diagram](https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b6c0d30_image.png)
-
 ## Table of Contents
 - [Introduction](#introduction)
 - [Key Features](#key-features)
