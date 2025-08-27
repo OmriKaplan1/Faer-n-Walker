@@ -160,40 +160,37 @@
   </div>
 </section>
 
-<section id="logic" class="reveal">
+<section id="logic" class="reveal fantasy-section">
   <h2>Logic</h2>
 
   <p>
-    Our frontend runs on <strong>Base44</strong> (rendering, routing, hosting). The client
-    interacts with Base44, and Base44 calls our <strong>Azure Functions</strong> via the
-    “Backend Functions” integration. Functions hold the business logic and secrets,
-    reading/writing data in <strong>Azure SQL Database</strong> and storing media/documents
-    in <strong>Azure Blob Storage</strong>. Map tiles, geocoding, and visualization use
-    <strong>Azure Maps</strong> directly from the frontend. This keeps the UI fast,
-    scales compute independently, and centralizes sensitive logic in the cloud.
+    Client (React/JavaScript): Your device; the user interface.<br>
+    Base44: The platform connecting your device to the backend, handling hosting, authentication, and routing requests.<br>
+    Azure Functions (JavaScript/Deno): The custom backend logic for game rules, data processing, and interactions.<br>
+    Azure SQL Database: Stores all game data (players, items, monsters, etc.).<br>
+    Azure Blob Storage: Holds large files like monster images.<br>
+    Azure Maps: Provides the location-based map and GPS features.
   </p>
 
-  <ul>
-    <li><strong>Client ↔ Base44:</strong> UI, auth, routing, and caching.</li>
-    <li><strong>Base44 ↔ Azure Functions:</strong> API calls for domain logic.</li>
-    <li><strong>Azure Functions ↔ SQL / Blob:</strong> relational data + files/media.</li>
-    <li><strong>Base44 ↔ Azure Maps:</strong> tiles, geocoding, and map display.</li>
+  <ul class="fantasy-list">
+    <li>🪶 <strong>Client ↔ Base44:</strong> UI, auth, routing, and caching.</li>
+    <li>⚔️ <strong>Base44 ↔ Azure Functions:</strong> API calls for domain logic.</li>
+    <li>📜 <strong>Azure Functions ↔ SQL / Blob:</strong> relational data + files/media.</li>
+    <li>🗺️ <strong>Base44 ↔ Azure Maps:</strong> tiles, geocoding, and map display.</li>
   </ul>
 
-  <p>
-    <div class="button-container">
+  <div class="button-container">
     <a class="button" href="https://github.com/OmriKaplan1/Faerun-Walker" target="_blank" rel="noopener">
       View our source code on GitHub
     </a>
-    </div>
-  </p>
+  </div>
 
   <figure class="flowchart">
-    <!-- replace src with your exported flowchart path -->
     <img src="assets/logos/flowchart.png"
-         alt="Flowchart: Client (wizard) ↔ Base44 ↔ Azure Functions ↔ SQL/Blob, with Base44 ↔ Azure Maps">
+         alt="Flowchart: Client ↔ Base44 ↔ Azure Functions ↔ SQL/Blob, with Base44 ↔ Azure Maps">
   </figure>
 </section>
+
 
 
 <section id="classes" class="reveal">
