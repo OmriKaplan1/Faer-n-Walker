@@ -9,8 +9,6 @@
   - [Setup](#setup)
   - [Configuration](#configuration)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -86,3 +84,64 @@ Once your environment variables are configured in Base44, you can run the applic
 This repository (the "code of the app" part) is structured as follows:
 
 . ├── components/ # Reusable React components for UI elements. ├── entities/ # JSON Schema definitions for client-side data models. ├── functions/ # Deno-based backend functions that proxy requests to Azure. ├── pages/ # React components defining the main application views/pages. ├── public/ # Static assets for the web application. ├── utils/ # General utility JavaScript functions. ├── Layout.js # The global layout component wrapping all pages. ├── package.json # Node.js project metadata and dependencies. └── ... # Other configuration files specific to the Base44 project.
+
+## Azure Functions Backend Setup
+
+### Dependencies
+Add these to your `requirements.txt`:
+- azure-functions
+- azure-storage-blob
+- azure-data-tables
+- pyodbc
+
+Install locally with:
+```bash
+pip install -r requirements.txt
+```
+
+### Deploying Azure Functions (Python)
+1. Create an Azure Functions App in the Azure Portal (choose Python as the runtime).
+2. Deploy your backend code (from the `backend/` folder) using VS Code, Azure CLI, or GitHub Actions.
+3. Install required Python packages by uploading your `requirements.txt` or using the Azure Portal's Kudu console.
+
+### Environment Variables
+Set these in your Azure Functions App configuration:
+- `SQL_CONNECTION_STRING`: Connection string for your Azure SQL Database.
+- `AZURE_STORAGE_ACCOUNT_KEY`: Key for Azure Blob Storage (if used).
+- Any other secrets (use Azure Key Vault for best security).
+
+### Local Development
+- Install [Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local) to run and debug locally.
+- Set environment variables in your local `.env` or via VS Code launch settings.
+
+## Azure Blob Storage
+
+### Setup
+1. Create a Storage Account and Blob Container in Azure Portal.
+2. Store your assets (e.g., monster images) in the container.
+3. Set the storage key in your Azure Functions App configuration.
+
+## Azure Maps
+
+### Setup
+1. Create an Azure Maps account in Azure Portal.
+2. Obtain your subscription key and set it in your environment variables.
+
+## Security
+- Use Azure Key Vault for managing secrets and sensitive configuration.
+- Restrict access to your Azure resources using IAM roles and policies.
+
+## Troubleshooting
+- If you encounter connection errors, check your environment variables and firewall settings.
+- For permission issues, ensure your Azure Functions App has the correct access policies for SQL, Blob Storage, and Maps.
+- Review logs in Azure Portal for detailed error messages.
+
+## Azure SQL Database
+
+### Database Setup
+1. Create an Azure SQL Database in the Azure Portal.
+2. Set up tables and schema using your preferred migration method (e.g., SQL scripts, ORM, or manual setup in the portal).
+3. To update schema (e.g., change column types), use SQL queries like:
+   ```sql
+   ALTER TABLE UserLocation ALTER COLUMN id UNIQUEIDENTIFIER NOT NULL;
+   ```
